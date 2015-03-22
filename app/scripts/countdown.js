@@ -58,18 +58,29 @@ function startTimer(duration, display) {
  * @return {[type]}            [description]
  */
 
-var bottomNav = document.querySelector('.bottomNav');
+var $bottomNav = document.querySelector('.bottomNav');
+var $search_container = document.querySelector('.search_container')
 var timer;
 window.onscroll = function() {
-    bottomNav.style.display = 'none';
+    // top search bar control
+    if (window.scrollY >= 65){
+        $search_container.style.position = "fixed";
+    } else {
+        $search_container.style.position = "relative";
+
+    };
+
+    // bottom nav bar control
+    $bottomNav.style.display = 'none';
     if (timer) {
         clearTimeout(timer);
     }
     timer = setTimeout(function() {
-        bottomNav.style.position = 'fixed';
-        bottomNav.style.display = 'block';
+        $bottomNav.style.position = 'fixed';
+        $bottomNav.style.display = 'block';
     }, 100);
 }
+
 
 
 
