@@ -1,0 +1,12 @@
+﻿@import "compass/reset";
+@import "compass/layout";
+@import "icons/*.png";
+$icons: sprite-map("icons/*.png", $layout: diagonal);
+$icons-sprite-dimensions: true;
+
+@import "partials/var";
+@import "partials/mixins";
+@import "partials/global";
+@import "partials/default";
+@import "partials/carousel";
+@import "partials/category_index";

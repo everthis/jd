@@ -1,0 +1,63 @@
+.category_nav {
+	@include inline-block-fix(a);
+	background-color: $reserve_btn_color;
+	a {
+		height: 64px;
+		padding: 17px 8px;
+		color: $white;
+		font-size: 22px;
+	}
+
+	.home {
+		float: right;
+	}
+}
+.search_row {
+	@include inline-block-fix(span);
+	margin: 10px 0 10px 0;
+	padding: 0 70px 0 10px;
+	position: relative;
+	.search_input {
+		border: 1px solid $border_color;
+		width: 100%;
+		input {
+		  padding: 0 0 0 10px;
+			width: 100%;
+			border: none;
+			height: 30px;
+			line-height: 30px;
+		}
+	}
+	.search_btn {
+		border: 1px solid $border_color;
+		position: absolute;
+		top: 0;
+		right: 10px;
+		font-size: 16px;
+		height: 32px;
+		line-height: 32px;
+		width: 50px;
+		text-align: center;
+		  background: $white;
+	}
+}
+.card-list {
+	padding: 10px;
+	li {
+	  width: 100%;
+	  height: 3em;
+	  display: inline-block;
+	  margin-bottom: 5px;
+
+	  $num-colors: 7;
+	  $base-color: #a24;
+	  $spectrum: 180deg;
+	  $offset: 30deg;
+
+	  @for $i from 0 to $num-colors {
+	    &:nth-child(#{$i}) {
+	      background: adjust-hue($base-color, $offset + $spectrum / $num-colors * $i);
+	    }
+	  }
+	}
+}

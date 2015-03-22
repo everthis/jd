@@ -1,0 +1,176 @@
+<div class="search_container">
+	<div class="search {{showIcon ? 'narrow' : 'wide'}}">
+		<a href="#/views/category" class="category"></a>
+	    <a href="#/" class="search_input">搜索喜欢的商品</a>
+	    <a href="#/" class="event" ng-show="{{showIcon}}"></a>
+	</div>
+</div>
+
+
+<div class="carousel_section">
+    <div id="carousel_inner_container">
+        <ul id="carousel">
+            <li>
+                <img src="images/carousel.jpg" />
+            </li>
+            <li>
+                <img src="images/carousel01.jpg" />
+            </li>
+            <li>
+                <img src="images/carousel02.jpg" />
+            </li>
+        </ul>
+        <div id="carousel_control_list">
+            <ul id="control_list_item">
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="main_content">
+	<div class="section_container">
+		<h1 class="section_title">特价秒杀 <span class="more">更多</span></h1>
+		<div class="time_container">
+			<div class="time">
+				<span class="per_clock {{$index == 0 ? 'active' : 'disactive'}}" ng-repeat="t in film.discounts.time">{{t}} 场</span>
+			</div>
+		</div>
+
+		<div class="discount">
+			<span class="per_discount" ng-repeat="discount in film.discounts.detail">
+				<div class="img"><img ng-src="images/{{discount.img}}" alt=""></div>
+				<p class="description">{{discount.ins}}</p>
+				<p class="price">
+				  <span class="price_now">{{discount.price_now}}</span>
+				  <span class="price_prev">{{discount.price_prev}}</span>
+				</p>
+				<p class="remaining">库存 <i class="{{(discount.remaining > 100) ? 'remain_many' : 'remain_few'}}"></i></p>
+				<p><span type="button" class="block_btn buy_btn" value="">立即抢购</span></p>
+			</span>
+		</div>
+	</div>
+
+	<div class="section_container">
+		<h1 class="section_title">特卖会</h1>
+		<div class="full_width_item" ng-repeat="ss in film.special">
+			<div class="inner_full_width_item">
+				<img ng-src="images/{{ss.img}}" alt="">
+				<div class="ins">
+					<i></i>
+					<span>剩余：{{ss.timeRemained}}</span>
+				</div>
+			</div>
+			<div class="addtional">
+				<span class="jd" ng-show="{{ss.IsJD}}">京东直送</span>
+				<span class="msg">{{ss.msg}}</span>
+				<span class="favourite"></span>
+				<span class="dis">{{ss.discount}}折起</span>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="section_container">
+			<h1 class="section_title">最新首发 <span class="more">更多</span></h1>
+			<div class="banner">
+				<img ng-src="images/{{film.newest.banner}}" alt="">
+			</div>
+			<!-- for pure JavaScript countdown timer. -->
+
+		<!-- 	<div class="countdown">
+				<span class="per_countdown" ng-repeat="countdown in film.newest.countdowns">
+					<div class="img"><img ng-src="images/{{countdown.img}}" alt=""></div>
+					<p class="timer">开售倒计时：<span id="time{{$index + 1}}"></span></p>
+					<p class="description">{{countdown.ins}}</p>
+					<p>{{countdown.price}}</p>
+					<p>{{countdown.reserved}}人已预约</p>
+					<div><span type="button" class="block_btn reserve_btn" value="">立即预约</span></div>
+				</span>
+			</div> -->
+			<!-- end of template -->
+
+			<div class="countdown">
+					<span class="per_countdown ng-scope">
+						<div class="img"><img alt="" src="images/flex.jpg"></div>
+						<p class="timer">开售倒计时:<span id="time1">
+							<span class="digit"></span>
+							<span class="digit"></span>
+							<span class="slice"></span>
+							<span class="digit"></span>
+							<span class="digit"></span>
+							<span class="slice"></span>
+							<span class="digit"></span>
+							<span class="digit"></span>
+						</span></p>
+						<p class="description">FLEX™ 时尚智能乐活手环使健身成为生活时尚</p>
+						<p class="price">￥303.00</p>
+						<p class="reservation">2500人已预约</p>
+						<div><span type="button" class="block_btn reserve_btn" value="">立即预约</span></div>
+					</span>
+					<span class="per_countdown ng-scope">
+						<div class="img"><img alt="" src="images/zip.jpg"></div>
+						<p class="timer">开售倒计时:<span id="time2">
+							<span class="digit"></span>
+							<span class="digit"></span>
+							<span class="slice"></span>
+							<span class="digit"></span>
+							<span class="digit"></span>
+							<span class="slice"></span>
+							<span class="digit"></span>
+							<span class="digit"></span>
+						</span></p>
+						<p class="description">ZIP™ 智能乐活夹扣 五种颜色可选</p>
+						<p class="price">￥929.00</p>
+						<p class="reservation">4592人已预约</p>
+						<div><span type="button" class="block_btn reserve_btn" value="">立即预约</span></div>
+					</span><!-- end ngRepeat: countdown in film.newest.countdowns -->
+			</div>
+	</div>
+
+	<div class="section_container">
+		<h1 class="section_title">精选栏目</h1>
+		<section class="category">
+			<span class="per_category" ng-repeat="cate in film.categories">
+				<div class="cate"><img ng-src="images/{{cate.icon}}" alt=""></div>
+				<div class="title">{{cate.title}}</div>
+				<div class="subTitle">{{cate.subTitle}}</div>
+			</span>
+		</section>
+
+		<section class="subDirectory">
+			<span class="per_subDirectory" ng-repeat="sub in film.subDirectories">
+				<div class="inner_per_subDirectory">
+
+				<!-- use text as description -->
+					<!--<span class="img"><img ng-src="images/{{sub.icon}}" alt=""></span>
+						<span class="description">
+							<p class="title">{{sub.title}}</p>
+							<p class="sub_title">{{sub.subTitle}}</p>
+						</span> -->
+
+					<!-- use image as content -->
+					<img class="image_as_content" ng-src="images/{{sub.image}}" alt="">
+				</div>
+			</span>
+		</section>
+	</div>
+
+</div>
+
+
+<nav class="bottomNav">
+	<a class="index current" href="/">首页</a>
+	<a class="category" href="#/views/category">分类</a>
+	<a class="cart" href="/">购物车</a>
+	<a class="profile" href="/">个人中心</a>
+
+</nav>
+
+<!-- <script type="text/javascript-lazy" src="/scripts/carousel.js"></script> -->
+<script type="text/javascript-lazy" src="scripts/countdown.js"></script>
+<script type="text/javascript-lazy" src="scripts/carousel.js"></script>
+
+
+
+
+

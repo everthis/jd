@@ -1,0 +1,119 @@
+{
+    "filmTitle": "It's a wonderful life(1946)",
+    "filmImagesLocation": "images/it_is_a_wonderful_life/",
+    "carousel": [
+        "carousel.jpg",
+        "carousel01.jpg",
+        "carousel02.jpg"
+    ],
+    "discounts": {
+        "time": [
+            "10:00",
+            "16:00",
+            "21:00"
+        ],
+
+        "detail": [{
+            "img": "girl1.jpg",
+            "ins": "蕾丝罩衫 puff sleeve point lace BL",
+            "price_now": "￥303.00",
+            "price_prev": "￥500",
+            "remaining": "1000"
+        }, {
+            "img": "man1.jpg",
+            "ins": "简约背心 simple sleeveless T",
+            "price_now": "￥929.00",
+            "price_prev": "￥2560",
+            "remaining": "20"
+        }]
+    },
+    "special": [
+            {
+                "img": "s11.jpg",
+                "timeRemained": "10天20小时",
+                "IsJD": "false",
+                "msg": "春日牛仔贩售",
+                "discount": "9"
+            }, {
+                "img": "s12.jpg",
+                "timeRemained": "10天20小时",
+                "IsJD": "true",
+                "msg": "秋冬新品发售/质感贩売",
+                "discount": "6"
+            }, {
+                "img": "s13.jpg",
+                "timeRemained": "49分",
+                "IsJD": "false",
+                "msg": "FINAL SALE / 稚气雅痞 年中回馈",
+                "discount": "2"
+            }
+        ],
+    "newest": {
+        "banner": "bb_03.jpg",
+        "countdowns": [
+            {
+                "img": "flex.jpg",
+                "ins": "FLEX™ 时尚智能乐活手环使健身成为生活时尚",
+                "price": "￥303.00",
+                "reserved": "2500"
+            }, {
+                "img": "zip.jpg",
+                "ins": "ZIP™ 智能乐活夹扣 五种颜色可选",
+                "price": "￥929.00",
+                "reserved": "4592"
+            }
+        ]
+    },
+    "categories": [
+        {
+            "icon": "icon1.png",
+            "title": "新品首发",
+            "subTitle": "新鲜潮品抢先发售"
+        }, {
+            "icon": "icon2.png",
+            "title": "品牌会",
+            "subTitle": "一线大牌超低折扣"
+        }, {
+            "icon": "icon3.png",
+            "title": "特价秒杀",
+            "subTitle": "特惠商品限时抢购"
+        }
+    ],
+    "subDirectories": [
+        {
+            "image": "1.png",
+            "icon": "sub1.png",
+            "title": "服装鞋帽",
+            "subTitle": "秋冬新品 折扣贩售"
+        }, {
+            "image": "2.png",
+            "icon": "sub2.png",
+            "title": "家用电器",
+            "subTitle": "京东直送 安全到家"
+            },
+        {
+            "image": "3.png",
+            "icon": "sub3.png",
+            "title": "服装鞋帽",
+            "subTitle": "潮流搭配 至IN格调"
+            },
+        {
+            "image": "4.png",
+            "icon": "sub4.png",
+            "title": "服装鞋帽",
+            "subTitle": "时尚服装 时尚服装"
+            },
+        {
+            "image": "5.png",
+            "icon": "sub5.png",
+            "title": "亲子屋",
+            "subTitle": "呵护备至 健康成长"
+            },
+        {
+            "image": "6.png",
+            "icon": "sub6.png",
+            "title": "服装鞋帽",
+            "subTitle": "时尚服装 时尚服装"
+        }
+    ]
+}

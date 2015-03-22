@@ -1,0 +1,45 @@
+.carousel_section {
+  margin: 65px 0 0 0;
+}
+#carousel_inner_container {
+    position: relative;
+    overflow: hidden;
+    #carousel {
+        position: relative;
+        li {
+            list-style: none;
+            float: left;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+#carousel_control_list {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    li {
+        display: inline-block;
+        margin-right: 6px;
+        list-style: none;
+        cursor: pointer;
+        background: url('../images/grey_dot.png') no-repeat;
+        background-size: cover;
+        width: 10px;
+        height: 10px;
+        text-align: center;
+        &.current {
+        background: url('../images/dark_dot.png') no-repeat;
+          background-size: cover;
+    }
+    }
+    #control_list_item {
+      text-align: center;
+      padding-bottom: 5px;
+    }
+}

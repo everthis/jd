@@ -1,0 +1,47 @@
+﻿@mixin clearfix() {
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+@mixin arrow-down($color, $width) {
+    display: inline-block;
+    content: " ";
+    width: 0;
+    height: 0;
+    border-top: $width solid $color;
+    border-right: $width solid transparent;
+    border-left: $width solid transparent;
+    border-bottom: 0 solid transparent;
+}
+@mixin arrow-up($color, $width) {
+    display: inline-block;
+    content: " ";
+    width: 0;
+    height: 0;
+    border-top: 0 solid transparent;
+    border-right: $width solid transparent;
+    border-left: $width solid transparent;
+    border-bottom: $width solid $color;
+}
+@mixin inline-block-fix($element) {
+    font-size: 0;
+    > #{$element} {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+%inline-block-fix {
+    font-size: 0;
+    > span {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+%decimal-list {
+    list-style-type: decimal;
+    padding: 0 0 0 2.5em;
+}
