@@ -358,10 +358,10 @@ var carousel = (function() {
 
 
 carousel.initialize({
-    autoPlay: true,
-    startIndex: 1,
-    direction: "left",
-    speed: .4,
-    interval: 3000
+    autoPlay: true, // true or false
+    startIndex: 1, // 1 to images.length
+    direction: "left", // left or right
+    speed: .4, // seconds
+    interval: 3000 // milliseconds
 });
 
